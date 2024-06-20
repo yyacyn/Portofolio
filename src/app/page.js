@@ -1,12 +1,25 @@
 "use client";
+import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { AiFillInstagram, AiFillGithub, AiFillLinkedin, Premier } from 'react-icons/ai';
+import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { BiLogoHtml5, BiLogoReact, BiLogoTailwindCss, BiLogoSpringBoot, BiLogoPostgresql, BiLogoAdobe } from 'react-icons/bi';
 import Image from "next/image";
 import { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import PrPage from '@/app/projects/breakingcorrupt/page';
+import Page from './page';
 
-
+const Root = () => (
+  <Router>
+    <Switch>
+      <Route exact path="/page" component={Page} />
+      <Route path="/projects" component={Projects} />
+      <Route path="/contact" component={Contact} />
+    </Switch>
+  </Router>
+);
 
 export default function Home() {
 
@@ -25,7 +38,7 @@ export default function Home() {
             <li className="text-blue-800 hover:bg-blue-800 hover:text-white dark:text-white p-0 lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#about">About Me</a></li>
             <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#skills">Skills</a></li>
             <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#projects">Projects</a></li>
-            <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#contact">Contact</a></li>
+            <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/contact">Contact</a></li>
             <li className="lg:ml-10"><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer lg:text-2xl transition-all hover:scale-105 active:scale-95 dark:text-white" /></li>
             <li><a className="hover:bg-blue-700 bg-blue-800  text-white p-2 px-2 rounded-md lg:text-xl" href="#">Resume</a>
             </li>
@@ -38,9 +51,9 @@ export default function Home() {
               <h3 className="text-xl lg:text-2xl py-2">Developer and Designer</h3>
               <p className="text-md lg:text-base py-2 lg:mx-[300px] leading-8 text-gray-800 dark:text-gray-100">As a student at IPB majoring in Software Engineering Technology with an interest in multimedia, web development and game development, I have high dedication to continue learning and developing skills in the latest technology. I believe that creativity, perseverance and teamwork are the keys to achieving success in this industry. </p>
               <div className="flex justify-center text-4xl lg:text-5xl gap-16 py-3 text-gray-700 dark:text-gray-100">
-              <AiFillInstagram onClick={() => window.open("https://www.instagram.com/yashinalfauzy/")} className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all"/>
-                <AiFillGithub onClick={() => window.open("https://github.com/yyacyn")}  className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all" />
-                <AiFillLinkedin onClick={() => window.open("https://www.linkedin.com/in/yashin-al-fauzy-sabara-29a42b293/")}  className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all"/>
+                <AiFillInstagram onClick={() => window.open("https://www.instagram.com/yashinalfauzy/")} className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all" />
+                <AiFillGithub onClick={() => window.open("https://github.com/yyacyn")} className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all" />
+                <AiFillLinkedin onClick={() => window.open("https://www.linkedin.com/in/yashin-al-fauzy-sabara-29a42b293/")} className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all" />
               </div>
             </div>
             <div className="relative h-[200px] w-[200px] mx-auto mb-5 lg:mb-[150px]">
@@ -126,7 +139,7 @@ export default function Home() {
                   <Image src="/brcr.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
                   <h3 className="my-1 font-bold">Breaking Corrupt</h3>
                   <p className="mb-2 leading-8">A visual novel game made using Ren'Py game engine. This game follows a story about a detective trying to uncover a druglord that has been dealing and corrupting a small town in Alberqueue, New Mexico.</p>
-                  <a href="#" className="bg-green-800 p-1 rounded-md text-white px-2">See more</a>
+                  <Link href="/projects/breakingcorrupt" className="bg-green-800 p-1 rounded-md text-white px-2">See details</Link>
                 </div>
               </div>
               <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
@@ -134,7 +147,7 @@ export default function Home() {
                   <Image src="/mulmed.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
                   <h3 className="my-1 font-bold">Wibuotack</h3>
                   <p className="mb-2 leading-8">Wibuotack is the name of the group where I done my projects. The projects consist of two products, those are PowerPoint and Motion Graphics. The projects were done within 7 weeks and presented in a formal way to our 'client'.</p>
-                  <a href="#" className="bg-blue-600 p-1 rounded-md text-white px-2">See more</a>
+                  <Link href="/projects/wibuotack" className="bg-blue-600 p-1 rounded-md text-white px-2">See details</Link>
                 </div>
               </div>
             </div>
@@ -144,7 +157,7 @@ export default function Home() {
                   <Image src="/safetydojo.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
                   <h3 className="my-1 font-bold">Safety Dojo Virtual Edtion</h3>
                   <p className="mb-2 leading-8">Safety Dojo Virtual Edition is the main project that I worked on during my highschool intern. Safety Dojo Virtual Edition is quiz program made in PowerPoint using Visual Basic macros with the purpose of training SOP (Standart of Procedures) to company's employees.</p>
-                  <a href="#" className="bg-blue-500 p-1 rounded-md text-white px-2">See more</a>
+                  <Link href="/projects/safetydojo" className="bg-blue-500 p-1 rounded-md text-white px-2">See details</Link>
                 </div>
               </div>
               <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
@@ -152,7 +165,7 @@ export default function Home() {
                   <Image src="/epicj.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
                   <h3 className="my-1 font-bold">Epic Jump</h3>
                   <p className="mb-2 leading-8">Epic Jump is a 'non-official' game project that I made using Godot game engine. This game purpose for me as a someone who is starting to get into game development is to help me build and expand my knowledge about game development.</p>
-                  <a href="#" className="bg-green-400 p-1 rounded-md text-white px-2">See more</a>
+                  <Link href="/projects/epicjump" className="bg-green-400 p-1 rounded-md text-white px-2">See details</Link>
                 </div>
               </div>
             </div>
@@ -162,11 +175,14 @@ export default function Home() {
                   <Image src="/stellar.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
                   <h3 className="my-1 font-bold">Point of Sale Toko Teratai 7</h3>
                   <p className="mb-2 leading-8">Point of Sale is a web application project that I made along with other 3 members in my team in our second semester Project-Based Learning. This web application was made using Spring Boot as the Java framework and MySQL as the DBMS.</p>
-                  <a href="#" className="bg-yellow-400 p-1 rounded-md text-white px-2">See more</a>
+                  <Link href="/projects/stellar" className="bg-yellow-400 p-1 rounded-md text-white px-2">See details</Link>
                 </div>
               </div>
             </div>
           </div>
+          {/* <div className="mx-auto flex my-3">
+            <Link href="/projects" className="py-2 px-3 mx-auto bg-blue-700 text-white rounded-md dark:bg-gra-800">More Projects</Link>
+          </div> */}
         </section>
       </main>
     </div>
