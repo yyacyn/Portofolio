@@ -83,7 +83,7 @@ export default function Home() {
               <span className='bg-blue-700 w-1 h-[50px] mx-auto'></span>
               <div className='mx-auto lg:w-[400px] p-3 bg-white shadow-md rounded-md dark:bg-gray-800 '>
               <h4 className="text-base text-gray-700 font-bold lg:text-xl dark:text-gray-100">Working/Internship</h4>
-                <h3 className="text-xl text-blue-700 font-bold lg:text-2xl dark:text-blue-400">Human Resource Departement</h3>
+                <h3 className="text-xl text-blue-700 font-bold lg:text-2xl dark:text-blue-400">Human Resource Dept.</h3>
                 <p className="text-md  text-gray-800 dark:text-gray-100 ">2021-2022</p>
                 <div className='flex items-center gap-2'>
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Panasonic_logo.svg/1200px-Panasonic_logo.svg.png" width={30} height={30}/>
