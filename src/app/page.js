@@ -1,113 +1,173 @@
+"use client";
+import Head from 'next/head';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { AiFillInstagram, AiFillGithub, AiFillLinkedin, Premier } from 'react-icons/ai';
+import { BiLogoHtml5, BiLogoReact, BiLogoTailwindCss, BiLogoSpringBoot, BiLogoPostgresql, BiLogoAdobe } from 'react-icons/bi';
 import Image from "next/image";
+import { useState } from "react";
+
+
 
 export default function Home() {
+
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className={darkMode ? "dark" : ""}>
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="Ballzer"></meta>
+        <link rel="icon" href="/icon.jpg"></link>
+      </Head>
+      <main className="px-5 bg-gray-50 dark:bg-gray-900 dark:text-white font-poppins">
+        <nav className="pb-4 pt-2 lg:py-4 lg:px-3 rounded-md mb-5 mx-2 flex flex-col lg:flex-row justify-between sticky top-2 items-center bg-gray-50 dark:bg-gray-800 shadow-lg z-10">
+          <h1 className="text-base lg:text-xl mx-auto lg:mx-0 py-2 dark:text-white">#developedbyyyacyn</h1>
+          <ul className="flex items-center gap-3 lg:gap-5 text-xs lg:text-xl justify-around px-2">
+            <li className="text-blue-800 hover:bg-blue-800 hover:text-white dark:text-white p-0 lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#about">About Me</a></li>
+            <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#skills">Skills</a></li>
+            <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#projects">Projects</a></li>
+            <li className="ml-10"><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer lg:text-2xl transition-all hover:scale-105 active:scale-95 dark:text-white" /></li>
+            <li><a className="hover:bg-blue-700 bg-blue-800  text-white p-2 px-2 rounded-md lg:text-xl" href="#">Resume</a>
+            </li>
+          </ul>
+        </nav>
+        <section className="mt-10">
+          <div>
+            <div className="text-center px-10 mt-10 mb-5" id='about'>
+              <h2 className="text-2xl lg:text-5xl py-2 text-blue-800 dark:text-blue-400">Yashin Al Fauzy Sabara</h2>
+              <h3 className="text-xl lg:text-2xl py-2">Developer and Designer</h3>
+              <p className="text-md lg:text-base py-2 lg:mx-[300px] leading-8 text-gray-800 dark:text-gray-100">As a student at IPB majoring in Software Engineering Technology with an interest in multimedia, web development and game development, I have high dedication to continue learning and developing skills in the latest technology. I believe that creativity, perseverance and teamwork are the keys to achieving success in this industry. </p>
+              <div className="flex justify-center text-4xl lg:text-5xl gap-16 py-3 text-gray-700 dark:text-gray-100">
+              <AiFillInstagram onClick={() => window.open("https://www.instagram.com/yashinalfauzy/")} className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all"/>
+                <AiFillGithub onClick={() => window.open("https://github.com/yyacyn")}  className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all" />
+                <AiFillLinkedin onClick={() => window.open("https://www.linkedin.com/in/yashin-al-fauzy-sabara-29a42b293/")}  className="hover:cursor-pointer hover:scale-105 active:scale-95 transition-all"/>
+              </div>
+            </div>
+            <div className="relative h-[200px] w-[200px] mx-auto mb-5 lg:mb-[150px]">
+              <Image src="/icon.jpg" alt="Profile Picture" layout="fill" objectFit="cover" className="rounded-full" />
+            </div>
+          </div>
+        </section>
+        <section className="my-2 mx-2 lg:w-[900px] lg:mx-auto">
+          <div className="flex flex-col justify-center">
+            <div className="">
+              <h3 className="text-xl py-1 text-blue-400 font-bold lg:text-2xl" id='skills'>Skills I offer</h3>
+              <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-100">Since I pique my insterest in software technology department, I have learned some skills, whether i learned from school or from the internet, here are some of them.</p>
+            </div>
+            <div className="flex flex-col">
+              <div className="flex lg:flex-row flex-col lg:gap-5 justify-center">
+                <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px] ">
+                  <div className="my-2 mx-2 p-2">
+                    <h3 className="my-1 font-bold">Front-end Development</h3>
+                    <div className="flex text-5xl justify-center">
+                      <BiLogoHtml5 />
+                      <BiLogoReact />
+                      <BiLogoTailwindCss />
+                    </div>
+                    <p className="mb-2 leading-8">I have experience in developing web applications using HTML, CSS, and JavaScript. I also have experience in using React.js and Tailwind CSS.</p>
+                  </div>
+                </div>
+                <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                  <div className="my-2 mx-2 p-2">
+                    <h3 className="my-1 font-bold">Back-end Development</h3>
+                    <div className="flex text-5xl justify-center">
+                      <BiLogoSpringBoot />
+                      <BiLogoPostgresql />
+                    </div>
+                    <p className="mb-2 leading-8">I have experience in developing web applications using Spring Boot, MySQL and PostgreSQL.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex lg:flex-row flex-col lg:gap-5 justify-center">
+                <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                  <div className="my-2 mx-2 p-2">
+                    <h3 className="my-1 font-bold">Multimedia</h3>
+                    <div className="flex text-5xl justify-center">
+                      <BiLogoAdobe />
+                    </div>
+                    <p className="mb-2 leading-8">I have experience in using some of the multimedia programs by Adobe such as Photoshop, Illustrator, Premiere Pro, and After Effects.</p>
+                  </div>
+                </div>
+                <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                  <div className="my-2 mx-2 p-2">
+                    <h3 className="my-1 font-bold">Game Development</h3>
+                    <div className="flex text-5xl justify-center gap-2">
+                      {!darkMode && (
+                        <>
+                          <Image src="/renpy.png" alt="renpy" width={50} height={50} className="" />
+                          <Image src="/godot.png" alt="godot" width={50} height={50} className="" />
+                          <Image src="/scratch.png" alt="scratch" width={50} height={50} className="" />
+                        </>
+                      )}
+                    </div>
+                    {darkMode && (
+                      <div className="flex text-5xl justify-center gap-2">
+                        <Image src="/renpyinv.png" alt="renpy" width={50} height={50} className="" />
+                        <Image src="/godotinv.png" alt="godot" width={50} height={50} className="" />
+                        <Image src="/scratchinv.png" alt="scratch" width={50} height={50} className="" />
+                      </div>
+                    )}
+                    <p className="mb-2 leading-8">I have experience in developing games using Ren'Py, Godot, and Scratch.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="mx-2 my-2 lg:w-[900px] lg:mx-auto">
+          <div className="flex flex-col justify-center">
+            <h3 className="text-xl py-1 text-blue-400 font-bold lg:text-2xl" id='projects'>Projects I've done</h3>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-50">Here are some of the projects that I have done, whether it's a group project or individual project.</p>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex lg:flex-row flex-col lg:gap-5 justify-center">
+              <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                <div className="my-2 mx-2 p-2">
+                  <Image src="/brcr.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
+                  <h3 className="my-1 font-bold">Breaking Corrupt</h3>
+                  <p className="mb-2 leading-8">A visual novel game made using Ren'Py game engine. This game follows a story about a detective trying to uncover a druglord that has been dealing and corrupting a small town in Alberqueue, New Mexico.</p>
+                  <a href="#" className="bg-green-800 p-1 rounded-md text-white px-2">See more</a>
+                </div>
+              </div>
+              <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                <div className="my-2 mx-2 p-2">
+                  <Image src="/mulmed.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
+                  <h3 className="my-1 font-bold">Wibuotack</h3>
+                  <p className="mb-2 leading-8">Wibuotack is the name of the group where I done my projects. The projects consist of two products, those are PowerPoint and Motion Graphics. The projects were done within 7 weeks and presented in a formal way to our 'client'.</p>
+                  <a href="#" className="bg-blue-600 p-1 rounded-md text-white px-2">See more</a>
+                </div>
+              </div>
+            </div>
+            <div className="flex lg:flex-row flex-col lg:gap-5 justify-center">
+              <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                <div className="my-2 mx-2 p-2">
+                  <Image src="/safetydojo.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
+                  <h3 className="my-1 font-bold">Safety Dojo Virtual Edtion</h3>
+                  <p className="mb-2 leading-8">Safety Dojo Virtual Edition is the main project that I worked on during my highschool intern. Safety Dojo Virtual Edition is quiz program made in PowerPoint using Visual Basic macros with the purpose of training SOP (Standart of Procedures) to company's employees.</p>
+                  <a href="#" className="bg-blue-500 p-1 rounded-md text-white px-2">See more</a>
+                </div>
+              </div>
+              <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                <div className="my-2 mx-2 p-2">
+                  <Image src="/epicj.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
+                  <h3 className="my-1 font-bold">Epic Jump</h3>
+                  <p className="mb-2 leading-8">Epic Jump is a 'non-official' game project that I made using Godot game engine. This game purpose for me as a someone who is starting to get into game development is to help me build and expand my knowledge about game development.</p>
+                  <a href="#" className="bg-green-400 p-1 rounded-md text-white px-2">See more</a>
+                </div>
+              </div>
+            </div>
+            <div className="flex lg:flex-row flex-col lg:gap-5 justify-center">
+              <div className="shadow-lg rounded-md text-gray-900 dark:bg-gray-800 dark:text-white text-center flex flex-col justify-center mb-5 lg:w-[450px]">
+                <div className="my-2 mx-2 p-2">
+                  <Image src="/stellar.png" alt="Description of Image" width={300} height={150} className="mx-auto" />
+                  <h3 className="my-1 font-bold">Point of Sale Toko Teratai 7</h3>
+                  <p className="mb-2 leading-8">Point of Sale is a web application project that I made along with other 3 members in my team in our second semester Project-Based Learning. This web application was made using Spring Boot as the Java framework and MySQL as the DBMS.</p>
+                  <a href="#" className="bg-yellow-400 p-1 rounded-md text-white px-2">See more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
