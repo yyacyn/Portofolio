@@ -33,9 +33,9 @@ export default function Home() {
       </Head>
       <main className="px-5 bg-gray-50 dark:bg-gray-900 dark:text-white font-poppins">
         <nav className="pb-4 pt-2 lg:py-4 lg:px-3 rounded-md mb-5 lg:mx-2 flex flex-col lg:flex-row justify-between sticky top-2 items-center bg-gray-50 dark:bg-gray-800 shadow-lg z-10">
-          <h1 className="text-base lg:text-xl mx-auto lg:mx-0 py-2 dark:text-white">#developedbyyyacyn</h1>
+          <a href='/#about' className="text-base lg:text-xl mx-auto lg:mx-0 py-2 dark:text-white">#yyacyn</a>
           <ul className="flex items-center gap-2 lg:gap-5 text-xs lg:text-xl justify-around px-2">
-            <li className="text-blue-800 hover:bg-blue-800 hover:text-white dark:text-white p-0 lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#about">About Me</a></li>
+            <li className="text-blue-800 hover:bg-blue-800 hover:text-white dark:text-white p-0 lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#experience">Experience</a></li>
             <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#skills">Skills</a></li>
             <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="#projects">Projects</a></li>
             <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/contact">Contact</a></li>
@@ -64,10 +64,49 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="mb-10 mt-3 mx-2 lg:w-[900px] lg:mx-auto">
+          <div className="flex flex-col justify-center">
+            <div className="">
+              <h3 className="text-xl py-1 text-blue-700 dark:text-blue-400 font-bold lg:text-2xl" id='experience'>Work and Organization Experience</h3>
+              <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-100">Throughout my life, I have been involved in various organizations and held several professional positions that have significantly contributed to my personal and professional growth. These experiences have equipped me with a diverse skill set, including leadership, project management, and teamwork. Here are a few highlights of my journey:</p>
+            </div>
+            <div className="flex flex-col">
+              <div className='mx-auto lg:w-[400px] p-3 bg-white shadow-md rounded-md dark:bg-gray-800'>
+                <h4 className="text-base text-gray-700 dark:text-gray-100 font-bold lg:text-xl">Organization</h4>
+                <h3 className="text-xl text-blue-700 dark:text-blue-400 font-bold lg:text-2xl">Micro IT Web Master</h3>
+                <p className="text-md  text-gray-800 dark:text-gray-100">2023-2024 </p>
+                <div className='flex items-center gap-2'>
+                  <Image src="https://upload.wikimedia.org/wikipedia/commons/1/15/Bogor_Agricultural_University_%28IPB%29_symbol.svg" width={30} height={30}/>
+                  <p className="text-md  text-gray-800 dark:text-gray-100">IPB University </p>
+                </div>
+              </div>
+              <span className='bg-blue-700 w-1 h-[50px] mx-auto'></span>
+              <div className='mx-auto lg:w-[400px] p-3 bg-white shadow-md rounded-md dark:bg-gray-800 '>
+              <h4 className="text-base text-gray-700 font-bold lg:text-xl dark:text-gray-100">Working/Internship</h4>
+                <h3 className="text-xl text-blue-700 font-bold lg:text-2xl dark:text-blue-400">Human Resource Departement</h3>
+                <p className="text-md  text-gray-800 dark:text-gray-100 ">2021-2022</p>
+                <div className='flex items-center gap-2'>
+                  <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Panasonic_logo.svg/1200px-Panasonic_logo.svg.png" width={30} height={30}/>
+                  <p className="text-md  text-gray-800 dark:text-gray-100">PT Panasonic Industrial Devices Batam</p>
+                </div>
+              </div>
+              <span className='bg-blue-700 w-1 h-[50px] mx-auto'></span>
+              <div className='mx-auto lg:w-[400px] p-3 bg-white shadow-md rounded-md dark:bg-gray-800'>
+              <h4 className="text-base text-gray-700 font-bold lg:text-xl dark:text-gray-100">Organization</h4>
+                <h3 className="text-xl text-blue-700 font-bold lg:text-2xl dark:text-blue-400">Vocational English Club</h3>
+                <p className="text-md  text-gray-800 dark:text-gray-100">2020</p>
+                <div className='flex items-center gap-2'>
+                  <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPYP2X_01RYnRasKs1SYJIu8-AjNl1JoxpZa1tW0pv94F1B7PjYLl9ElU2sEUzODr1AU2Cf0lKYN2HpRqX9vxYyEPuTHw1r3FJPX36lHLICPXHS5-DBnsff9nO-SOd9QZeYlKVUvttsgw/s1600/Logo+SMK.png" width={30} height={30}/>
+                  <p className="text-md  text-gray-800 dark:text-gray-100">SMK Negeri 1 Batam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="my-2 mx-2 lg:w-[900px] lg:mx-auto">
           <div className="flex flex-col justify-center">
             <div className="">
-              <h3 className="text-xl py-1 text-blue-400 font-bold lg:text-2xl" id='skills'>Skills I offer</h3>
+              <h3 className="text-xl py-1 text-blue-700 dark:text-blue-400 font-bold lg:text-2xl" id='skills'>Skills I offer</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-100">Since I pique my insterest in software technology department, I have learned some skills, whether i learned from school or from the internet, here are some of them.</p>
             </div>
             <div className="flex flex-col">
@@ -132,7 +171,7 @@ export default function Home() {
         </section>
         <section className="mx-2 my-2 lg:w-[900px] lg:mx-auto">
           <div className="flex flex-col justify-center">
-            <h3 className="text-xl py-1 text-blue-400 font-bold lg:text-2xl" id='projects'>Projects I've done</h3>
+            <h3 className="text-xl py-1 text-blue-700 dark:text-blue-400 font-bold lg:text-2xl" id='projects'>Projects I've done</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-50">Here are some of the projects that I have done, whether it's a group project or individual project.</p>
           </div>
           <div className="flex flex-col">

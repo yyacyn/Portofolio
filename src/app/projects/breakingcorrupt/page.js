@@ -41,14 +41,17 @@ export default function Project() {
             </Head>
             <main className="px-5 bg-gray-50 dark:bg-gray-900 dark:text-white font-poppins">
                 <nav className="pb-4 pt-2 lg:py-4 lg:px-3 rounded-md mb-5 lg:mx-2 flex flex-col lg:flex-row justify-between sticky top-2 items-center bg-gray-50 dark:bg-gray-800 shadow-lg z-10">
-                    <h1 className="text-base lg:text-xl mx-auto lg:mx-0 py-2 dark:text-white">#developedbyyyacyn</h1>
+                    <a href='/#about' className="text-base lg:text-xl mx-auto lg:mx-0 py-2 dark:text-white">#yyacyn</a>
                     <ul className="flex items-center gap-2 lg:gap-5 text-xs lg:text-xl justify-around px-2">
-                        <li className="text-blue-800 hover:bg-blue-800 hover:text-white dark:text-white p-0 lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/#about">About Me</a></li>
+                        <li className="text-blue-800 hover:bg-blue-800 hover:text-white dark:text-white p-0 lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/#experience">Experience</a></li>
                         <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/#skills">Skills</a></li>
                         <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/#projects">Projects</a></li>
                         <li className="text-blue-800 hover:bg-blue-800 hover:text-white p-0 dark:text-white lg:px-2 lg:py-1 rounded-md transition-all active:bg-blue-600"><a href="/contact">Contact</a></li>
                         <li className="lg:ml-10"><BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer lg:text-2xl transition-all hover:scale-105 active:scale-95 dark:text-white" /></li>
-                        <li><a className="hover:bg-blue-700 bg-blue-800  text-white p-2 px-2 rounded-md lg:text-xl" href="#">Resume</a>
+                        <li><a className="hover:bg-blue-700 bg-blue-800  text-white p-2 px-2 rounded-md lg:text-xl" href="#" onClick={(e) => {
+                            e.preventDefault();
+                            alert('Work inProgress');
+                        }}>Resume</a>
                         </li>
                     </ul>
                 </nav>
@@ -59,12 +62,12 @@ export default function Project() {
                             <span className='max-w-[280px] h-1 mt-1 bg-blue-700 dark:bg-blue-400 rounded-md'></span>
                             <p className='py-5 text-sm lg:text-base'>Breaking Corrupt is a visual novel game made using Ren'Py game engine. This game follows a story about a detective trying to uncover a druglord that has been dealing and corrupting a small town in Alberqueue, New Mexico.</p>
                             <div className='flex flex-col lg:flex-row gap-5 mx-auto my-2'>
-                                <Image src="/breakingcorrupt/image.png" width={300} height={300} className='shadow-lg'/>
-                                <Image src="/breakingcorrupt/image1.png" width={300} height={300} className='shadow-lg'/>
+                                <Image src="/breakingcorrupt/image.png" width={300} height={300} className='shadow-lg' />
+                                <Image src="/breakingcorrupt/image1.png" width={300} height={300} className='shadow-lg' />
                             </div>
                             <div className='flex flex-col lg:flex-row gap-5 mx-auto'>
-                                <Image src="/breakingcorrupt/image2.png" width={300} height={300} className='shadow-lg'/>
-                                <Image src="/breakingcorrupt/image3.png" width={300} height={300} className='shadow-lg'/>
+                                <Image src="/breakingcorrupt/image2.png" width={300} height={300} className='shadow-lg' />
+                                <Image src="/breakingcorrupt/image3.png" width={300} height={300} className='shadow-lg' />
                             </div>
                             <p className='py-5 text-sm lg:text-base'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste amet asperiores error quis cupiditate quae alias labore tenetur excepturi laboriosam iusto, quas officiis? Unde aspernatur, culpa saepe ex voluptate alias.</p>
                         </div>

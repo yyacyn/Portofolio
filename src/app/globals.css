@@ -37,7 +37,7 @@ body {
   src: url(/public/Poppins-Regular.ttf);
 }
 
-#about, #skills, #projects {
+#about, #skills, #projects, #experience {
   padding-top: 85px; /* height of navbar */
   margin-top: -85px;
 }
